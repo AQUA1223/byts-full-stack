@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>taskpage</title>
+    <style>
+      body {
+        background-image: url(../html/Screenshot\ 2025-05-16\ 140637.png);
+      }
+      /* body {
+        background-image: url(../images/sparkle-star.gif);
+        backface-visibility: hidden;
+      } */
+      
+      ul {
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        list-style-type: none;
+        text-transform: none;
+      }
+      :hover.add {
+        background-color: aliceblue;
+        color: black;
+        transition: 1s;
+        cursor: pointer;
+      }
+      :hover.stopwatch {
+        background-color: aliceblue;
+        color: black;
+        transition: 1s;
+      }
+      :hover.calculator {
+        background-color: aliceblue;
+        color: black;
+        transition: 1s;
+      }
+      :hover.farenheat {
+        background-color: aliceblue;
+        color: black;
+        transition: 1s;
+      }
+      :hover.home {
+        background-color: aliceblue;
+        color: black;
+        transition: 0.6s;
+        cursor: pointer;
+      }
+      a {
+        width: auto;
+        height: 28px;
+        padding: 20px;
+        font-size: larger;
+        background-color: rgba(0, 0, 0);
+        border-radius: 5px;
+        text-decoration: none;
+        text-transform: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome Page</h1>
+    <header>
+      <ul>
+        <a class="home" hef="#"><li>Home</li> </a>
+        <a class="add" href="./add.html" target="_blank"
+          ><li>Task1-addition</li></a
+        >
+        <a class="stopwatch" href="./stopwatch.html" target="_blank"
+          ><li>Task2-stopwatch</li></a
+        >
+        <a class="calculator" href="./calculator.html" target="_blank"
+          ><li>Task3-Calculator</li></a
+        >
+        <a class="farenheat" href="./farenheat.html" target="_blank"
+          ><li>Task4-fahrenheit-convert</li></a
+        >
+      </ul>
+    </header>
+  </body>
+</html>

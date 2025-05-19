@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="D:\learn\task\task1\stopwatch.svg" />
+    <title>StopWatch</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: antiquewhite;
+      background-image: url("../images/360_F_717760078_Xi0zRPpvVsrwpp7nRkX4nKjatKDhpCNy.jpg");
+      background-size: cover;
+    }
+    fieldset {
+      border-color: rgba(1, 8, 15, 0.684);
+      background-image: url("./pngtree-orange-stop-watch-timer-vector-png-image_7117936.png");
+      background-size: cover;
+      background-color: rgba(165, 72, 26, 0.352);
+      font-size: xx-large;
+      box-shadow: 10px 10px 5px;
+    }
+  </style>
+  <body>
+    <center>
+      <fieldset>
+        <h1>StopWatch</h1>
+        <p id="res">00:00:00</p>
+        <button onclick="start()">start</button>
+        <button onclick="stop()">stop</button>
+        <button onclick="reset()">reset</button>
+      </fieldset>
+    </center>
+    <script>
+      var st = 0;
+      let m = null;
+      var min = 0,
+        sec = 0,
+        h = 0;
+      function start() {
+        if (m !== null) return;
+        m = setInterval(() => {
+          if (sec == 60) {
+            sec = 0;
+            min += 1;
+          }
+          if (min == 60) {
+            min = 0;
+            h += 1;
+          }
+          sec++;
+          document.getElementById("res").textContent =
+            h + ":" + min + ":" + sec;
+        }, 1000);
+      }
+      function stop() {
+        clearInterval(m);
+        m = null;
+      }
+      function reset() {
+        sec = 0;
+        min = 0;
+        h = 0;
+        document.getElementById("res").textContent = h + ":" + min + ":" + sec;
+        clearInterval(m);
+      }
+    </script>
+  </body>
+</html>
